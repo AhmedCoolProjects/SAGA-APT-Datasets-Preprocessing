@@ -2,6 +2,10 @@
 
 This repository contains a Jupyter notebook–based pipeline for preparing the SAGA APT (Advanced Persistent Threat) telemetry into log-style CSV datasets suitable for downstream analytics or ML.
 
+## Known Datasets
+
+![alt text](known/normal_anomalous.png)
+
 ## Contents
 
 - Notebook: [github/SAGA APT Datasets Preprocessing.ipynb](github/SAGA APT Datasets Preprocessing.ipynb)
@@ -26,7 +30,7 @@ This repository contains a Jupyter notebook–based pipeline for preparing the S
 8. Load processed slices with [`load_prod`](github/SAGA APT Datasets Preprocessing.ipynb) for analysis.
 9. Generate distribution bar plot (Normal vs Anomalous per chunk) saved as `normal_anomalous.png`.
 
-## Directory Structure (Example)
+## Directory Structure
 
 ```
 known/
@@ -35,16 +39,10 @@ known/
   ...
   known_c8.csv.gz
   normal_anomalous.png
-composite/
-  M1.json ...
-generated/
-  G1.json ...
-prod/
-  C1_log.csv ...
-  known.csv
+SAGA APT Datasets Preprocessing.ipynb
 ```
 
-## Usage
+<!-- ## Usage
 
 1. Set `BASE_PATH` in the notebook to the root containing `known/`, `composite/`, `generated/`.
 2. Run cells in order:
@@ -57,7 +55,7 @@ prod/
    ```bash
    gzip known_c*.csv
    ```
-4. Re-run the Analysis section to regenerate the Normal/Anomalous distribution plot.
+4. Re-run the Analysis section to regenerate the Normal/Anomalous distribution plot. -->
 
 ## Key Functions
 
@@ -69,6 +67,7 @@ prod/
 | Clean high-variance tokens   | [`clean_log_content`](github/SAGA APT Datasets Preprocessing.ipynb) |
 | Load processed CSV slices    | [`load_prod`](github/SAGA APT Datasets Preprocessing.ipynb)         |
 
+<!--
 ## Plot Generation
 
 The analysis section:
@@ -76,13 +75,7 @@ The analysis section:
 - Aggregates counts (Total / Normal / Anomalous) per dataset chunk
 - Melts to long form
 - Computes percentages
-- Renders a Seaborn grouped bar chart with percentage labels
-
-## Notes
-
-- Large counts: Y‑axis labeled “Count (in Millions)”—adjust scaling if exporting subsets.
-- Ensure memory adequacy; consider chunked reading if expanding beyond eight slices.
-- Cleaning patterns are conservative; tailor regexes as needed for your threat model.
+- Renders a Seaborn grouped bar chart with percentage labels -->
 
 <!-- ## Citation
 
