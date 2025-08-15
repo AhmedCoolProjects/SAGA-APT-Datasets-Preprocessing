@@ -5,7 +5,7 @@ This repository contains a Jupyter notebook–based pipeline for preparing the S
 ## Contents
 
 - Notebook: [github/SAGA APT Datasets Preprocessing.ipynb](github/SAGA APT Datasets Preprocessing.ipynb)
-- Raw JSON folders (expected): `known/`, `composite/`, `generated/`
+<!-- - Raw JSON folders (expected): `known/`, `composite/`, `generated/` -->
 - Processed CSV outputs (per chunk & merged): typically under `prod/`
 - Compressed per‑chunk cleaned files: `known/known_c1.csv.gz` … `known/known_c8.csv.gz`
 - Plot: `known/normal_anomalous.png`
